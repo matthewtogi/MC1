@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BE153B2A00B0110077DDC6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE153A2A00B0110077DDC6 /* TestView.swift */; };
 		BB0D6D4F286D28D700C72C50 /* EventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D6D4E286D28D700C72C50 /* EventsCalendarView.swift */; };
 		BB1F0E9B286F57CD008828D5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F0E9A286F57CD008828D5 /* CalendarView.swift */; };
 		BB9F3A4F286C033D00664628 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F3A4E286C033D00664628 /* Date+Extension.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43BE153A2A00B0110077DDC6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BB0D6D4E286D28D700C72C50 /* EventsCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarView.swift; sourceTree = "<group>"; };
 		BB1F0E9A286F57CD008828D5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		BB9F3A4E286C033D00664628 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				BBCDC1A6286B9B5D002FE328 /* Extensions */,
 				BBCDC18E286B9A7F002FE328 /* Assets.xcassets */,
 				BBCDC190286B9A7F002FE328 /* Preview Content */,
+				43BE153A2A00B0110077DDC6 /* TestView.swift */,
 			);
 			path = CalendarActivityList;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BE153B2A00B0110077DDC6 /* TestView.swift in Sources */,
 				BBEAB8E6286CF82E00BF4A75 /* ListViewRow.swift in Sources */,
 				BB9F3A52286C0C0F00664628 /* Event.swift in Sources */,
 				BB1F0E9B286F57CD008828D5 /* CalendarView.swift in Sources */,
