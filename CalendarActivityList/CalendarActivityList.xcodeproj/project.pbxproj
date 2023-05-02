@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43BE153B2A00B0110077DDC6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE153A2A00B0110077DDC6 /* TestView.swift */; };
+		34D5C6FD2A00A7A0009A86F3 /* ListOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C6FC2A00A7A0009A86F3 /* ListOfActivityView.swift */; };
+		34D5C6FF2A00B6DA009A86F3 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C6FE2A00B6DA009A86F3 /* ToDoView.swift */; };
+		34D5C7012A00B6E5009A86F3 /* LateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C7002A00B6E5009A86F3 /* LateView.swift */; };
+		34D5C7032A00B6F0009A86F3 /* DoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C7022A00B6F0009A86F3 /* DoneView.swift */; };
+		34D5C7062A00C117009A86F3 /* AddActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C7052A00C117009A86F3 /* AddActivitySheet.swift */; };
+		34D5C7082A00D86A009A86F3 /* ListOfActivityInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5C7072A00D86A009A86F3 /* ListOfActivityInitialView.swift */; };
 		BB0D6D4F286D28D700C72C50 /* EventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D6D4E286D28D700C72C50 /* EventsCalendarView.swift */; };
 		BB1F0E9B286F57CD008828D5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F0E9A286F57CD008828D5 /* CalendarView.swift */; };
 		BB9F3A4F286C033D00664628 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F3A4E286C033D00664628 /* Date+Extension.swift */; };
@@ -27,7 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		43BE153A2A00B0110077DDC6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		34D5C6FC2A00A7A0009A86F3 /* ListOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfActivityView.swift; sourceTree = "<group>"; };
+		34D5C6FE2A00B6DA009A86F3 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		34D5C7002A00B6E5009A86F3 /* LateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LateView.swift; sourceTree = "<group>"; };
+		34D5C7022A00B6F0009A86F3 /* DoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneView.swift; sourceTree = "<group>"; };
+		34D5C7052A00C117009A86F3 /* AddActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySheet.swift; sourceTree = "<group>"; };
+		34D5C7072A00D86A009A86F3 /* ListOfActivityInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfActivityInitialView.swift; sourceTree = "<group>"; };
 		BB0D6D4E286D28D700C72C50 /* EventsCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarView.swift; sourceTree = "<group>"; };
 		BB1F0E9A286F57CD008828D5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		BB9F3A4E286C033D00664628 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -58,6 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34D5C7042A00C0EB009A86F3 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				34D5C7022A00B6F0009A86F3 /* DoneView.swift */,
+				34D5C7052A00C117009A86F3 /* AddActivitySheet.swift */,
+				34D5C6FC2A00A7A0009A86F3 /* ListOfActivityView.swift */,
+				34D5C7072A00D86A009A86F3 /* ListOfActivityInitialView.swift */,
+				34D5C7002A00B6E5009A86F3 /* LateView.swift */,
+				34D5C6FE2A00B6DA009A86F3 /* ToDoView.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		BB0D6D4D286D28A500C72C50 /* CalendarViewTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +117,6 @@
 				BBCDC1A6286B9B5D002FE328 /* Extensions */,
 				BBCDC18E286B9A7F002FE328 /* Assets.xcassets */,
 				BBCDC190286B9A7F002FE328 /* Preview Content */,
-				43BE153A2A00B0110077DDC6 /* TestView.swift */,
 			);
 			path = CalendarActivityList;
 			sourceTree = "<group>";
@@ -120,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB135BB286CD37400F3E911 /* StartTabView.swift */,
+				34D5C7042A00C0EB009A86F3 /* Activity */,
 				BBEAB8E8286CFF2100BF4A75 /* ListView Tab */,
 				BB0D6D4D286D28A500C72C50 /* CalendarViewTab */,
 				BBEAB8E7286CFEDF00BF4A75 /* EditUpdateView */,
@@ -225,19 +248,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BE153B2A00B0110077DDC6 /* TestView.swift in Sources */,
+				34D5C7062A00C117009A86F3 /* AddActivitySheet.swift in Sources */,
 				BBEAB8E6286CF82E00BF4A75 /* ListViewRow.swift in Sources */,
 				BB9F3A52286C0C0F00664628 /* Event.swift in Sources */,
 				BB1F0E9B286F57CD008828D5 /* CalendarView.swift in Sources */,
 				BB0D6D4F286D28D700C72C50 /* EventsCalendarView.swift in Sources */,
+				34D5C6FF2A00B6DA009A86F3 /* ToDoView.swift in Sources */,
 				BBB135BE286CD59F00F3E911 /* EventsListView.swift in Sources */,
 				BBB135BC286CD37400F3E911 /* StartTabView.swift in Sources */,
 				BBEAB8E0286CEBD400BF4A75 /* EventFormViewModel.swift in Sources */,
 				BBB135B8286CB64E00F3E911 /* EventFormView.swift in Sources */,
+				34D5C6FD2A00A7A0009A86F3 /* ListOfActivityView.swift in Sources */,
+				34D5C7012A00B6E5009A86F3 /* LateView.swift in Sources */,
 				BBEAB8E2286CEC8800BF4A75 /* EventFormType.swift in Sources */,
 				BBCDC18B286B9A7E002FE328 /* AppEntry.swift in Sources */,
 				BB9F3A4F286C033D00664628 /* Date+Extension.swift in Sources */,
 				BBC06077286E10E00017E1B7 /* DaysEvents.swift in Sources */,
+				34D5C7082A00D86A009A86F3 /* ListOfActivityInitialView.swift in Sources */,
+				34D5C7032A00B6F0009A86F3 /* DoneView.swift in Sources */,
 				BBCDC19A286B9AC7002FE328 /* EventStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

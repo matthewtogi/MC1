@@ -45,7 +45,7 @@ class EventStore: ObservableObject {
             movedEvent = events[index]
             events[index].date = event.date
             events[index].dateEnd = event.dateEnd
-            events[index].note = event.note
+            events[index].name = event.name
             events[index].eventType = event.eventType
             changedEvent = event
         }

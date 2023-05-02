@@ -10,21 +10,39 @@
 import SwiftUI
 
 struct ListViewRow: View {
-    let event: Event
+    @State var event: Event
     @Binding var formType: EventFormType?
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(event.eventType.icon)
-                        .font(.system(size: 40))
-                    Text(event.note)
-                }
-                Text(
-                    event.date.formatted(date: .abbreviated,
-                                         time: .shortened)
+            HStack() {
+                Image(systemName: event.isCompleted ? "checkmark.square" : "square")
+                    .font(.system(size: 22))
+                    .onTapGesture {
+                        event.isCompleted.toggle()
+                    }
+                VStack(alignment: .leading, spacing: 5){
+                    HStack{
+                        Text(event.eventType.icon)
+                            .font(.system(size: 17))
+                        Text(event.name)
+                            .font(.system(size: 17))
+                    }
                     
-                )
+                    Text(event.description)
+                        .font(.system(size: 12))
+                }
+//                HStack{
+//                    Text(
+//                        event.date.formatted(.dateTime.day().month().year())
+//                    )
+//                    Text("-")
+//                    Text(
+//                        event.dateEnd.formatted(.dateTime.day().month().year())
+//                    )
+//                }
+                
+                
+                
             }
             Spacer()
             Button {
@@ -34,12 +52,13 @@ struct ListViewRow: View {
             }
             .buttonStyle(.bordered)
         }
+        
     }
 }
 
- struct ListViewRow_Previews: PreviewProvider {
-     static let event = Event(eventType: .location, date: Date(), note: "Let's find the venue", dateEnd: Date().diff(numDays: 10))
+struct ListViewRow_Previews: PreviewProvider {
+    static let event = Event(eventType: .location, date: Date(), name: "Venue", dateEnd: Date().diff(numDays: -3), isCompleted: true, description: "List possible venues")
     static var previews: some View {
         ListViewRow(event: event, formType: .constant(.new))
     }
- }
+}

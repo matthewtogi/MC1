@@ -38,9 +38,11 @@ struct Event: Identifiable {
 
     var eventType: EventType
     var date: Date
-    var note: String
+    var name: String
     var id: String
     var dateEnd: Date
+    var isCompleted: Bool
+    var description: String
     
     var dateComponents: DateComponents {
         var dateComponents = Calendar.current.dateComponents(
@@ -55,25 +57,26 @@ struct Event: Identifiable {
         return dateComponents
     }
 
-    init(id: String = UUID().uuidString, eventType: EventType = .unspecified, date: Date, note: String, dateEnd: Date) {
+    init(id: String = UUID().uuidString, eventType: EventType = .unspecified, date: Date, name: String, dateEnd: Date, isCompleted: Bool, description: String) {
         self.eventType = eventType
         self.date = date
         self.dateEnd = dateEnd
-//        self.test = test
-        self.note = note
+        self.isCompleted = isCompleted
+        self.name = name
         self.id = id
+        self.description = description
     }
 
     // Data to be used in the preview
     static var sampleEvents: [Event] {
         return [
-            Event(eventType: .location, date: Date().diff(numDays: 0), note: "List possible venues", dateEnd: Date().diff(numDays: 10)),
-            Event(eventType: .outfit, date: Date().diff(numDays: 1), note: "List possible outfits", dateEnd: Date().diff(numDays: 11)),
-            Event(eventType: .photo, date: Date().diff(numDays: 2), note: "List possible photographers", dateEnd: Date().diff(numDays: 12)),
-            Event(eventType: .makeup, date: Date().diff(numDays: 3), note: "List possible make-up artists", dateEnd: Date().diff(numDays: 13)),
-            Event(eventType: .pose, date: Date().diff(numDays: 4), note: "List possible poses", dateEnd: Date().diff(numDays: 14)),
-            Event(eventType: .props, date: Date().diff(numDays: 5), note: "List possible props", dateEnd: Date().diff(numDays: 15)),
-            Event(date: Date().diff(numDays: 6), note: "Miscellanous", dateEnd: Date().diff(numDays: 16))
+            Event(eventType: .location, date: Date().diff(numDays: -10), name: "Venue", dateEnd: Date().diff(numDays: -3), isCompleted: true, description: "List possible venues"),
+            Event(eventType: .outfit, date: Date().diff(numDays: -9), name: "Outfit", dateEnd: Date().diff(numDays: -2), isCompleted: true, description: "List possible outfits"),
+            Event(eventType: .photo, date: Date().diff(numDays: -8), name: "Photographer", dateEnd: Date().diff(numDays: -1), isCompleted: false, description: "List possible photographers"),
+            Event(eventType: .makeup, date: Date().diff(numDays: 3), name: "Make-up", dateEnd: Date().diff(numDays: 13), isCompleted: false, description: "List possible make-up artists"),
+            Event(eventType: .pose, date: Date().diff(numDays: 4), name: "Pre-wedding Pose", dateEnd: Date().diff(numDays: 14), isCompleted: false, description: "List possible poses"),
+            Event(eventType: .props, date: Date().diff(numDays: 5), name: "Props", dateEnd: Date().diff(numDays: 15), isCompleted: false, description: "List possible props"),
+            Event(date: Date().diff(numDays: 6), name: "Miscellanous", dateEnd: Date().diff(numDays: 16), isCompleted: false, description: "List random things")
         ]
     }
 }

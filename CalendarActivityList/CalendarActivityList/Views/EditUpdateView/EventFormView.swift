@@ -18,14 +18,16 @@ struct EventFormView: View {
         NavigationStack {
             VStack {
                 Form {
-                    DatePicker(selection: $viewModel.date) {
+                    TextField("Activity Name", text: $viewModel.name, axis: .vertical)
+                        .focused($focus, equals: true)
+                    TextField("Activity Description", text: $viewModel.description, axis: .vertical)
+                        .focused($focus, equals: true)
+                    DatePicker(selection: $viewModel.date, displayedComponents: .date) {
                         Text("Date Start")
                     }
-                    DatePicker(selection: $viewModel.dateEnd) {
+                    DatePicker(selection: $viewModel.dateEnd, displayedComponents: .date) {
                         Text("Date End")
                     }
-                    TextField("Note", text: $viewModel.note, axis: .vertical)
-                        .focused($focus, equals: true)
                     Picker("Event Type", selection: $viewModel.eventType) {
                         ForEach(Event.EventType.allCases) {eventType in
                             Text(eventType.icon + " " + eventType.rawValue.capitalized)
@@ -41,13 +43,13 @@ struct EventFormView: View {
                                 let event = Event(id: viewModel.id!,
                                                   eventType: viewModel.eventType,
                                                   date: viewModel.date,
-                                                  note: viewModel.note, dateEnd: viewModel.dateEnd)
+                                                  name: viewModel.name, dateEnd: viewModel.dateEnd, isCompleted: viewModel.isCompleted, description: viewModel.description)
                                 eventStore.update(event)
                             } else {
                                 // create new event
                                 let newEvent = Event(eventType: viewModel.eventType,
                                                      date: viewModel.date,
-                                                     note: viewModel.note, dateEnd: viewModel.dateEnd)
+                                                     name: viewModel.name, dateEnd: viewModel.dateEnd, isCompleted: viewModel.isCompleted, description: viewModel.description)
                                 eventStore.add(newEvent)
                             }
                             dismiss()

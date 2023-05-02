@@ -12,8 +12,10 @@ import Foundation
 class EventFormViewModel: ObservableObject {
     @Published var date = Date()
     @Published var dateEnd = Date()
-    @Published var note = ""
+    @Published var name = ""
+    @Published var description = ""
     @Published var eventType: Event.EventType = .unspecified
+    @Published var isCompleted = false
 
     var id: String?
     var updating: Bool { id != nil }
@@ -23,12 +25,13 @@ class EventFormViewModel: ObservableObject {
     init(_ event: Event) {
         date = event.date
         dateEnd = event.dateEnd
-        note = event.note
+        name = event.name
         eventType = event.eventType
         id = event.id
+        isCompleted = event.isCompleted
     }
 
     var incomplete: Bool {
-        note.isEmpty
+        name.isEmpty
     }
 }
